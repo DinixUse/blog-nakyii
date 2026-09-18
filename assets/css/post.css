@@ -16,7 +16,7 @@
 
 #article .article-thumbnail .article-title {
   font-size: 2rem !important;
-  color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-background);
   text-shadow: 0px 0px 3px var(--md-sys-color-background);
   line-height: 120%;
 }
@@ -46,8 +46,8 @@
   padding: 0;
 }
 .article-content a {
-  color: var(--md-sys-color-primary-container);
-  border-bottom: 3px solid var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-tertiary);
+  border-bottom: 3px solid var(--md-sys-color-tertiary);
 }
 .article-content h1 {
   font-size: 2rem;
@@ -81,7 +81,7 @@
   margin-bottom: 1.75rem;
   font-style: italic;
   font-weight: 100;
-  border-left: 0.3rem solid var(--md-sys-color-primary-container);
+  border-left: 0.3rem solid var(--md-sys-color-tertiary);
   font-size: 1.2rem;
 }
 .article-content strong {
@@ -108,7 +108,7 @@
 }
 .article-content table th {
   background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-primary);
   border: 1px solid var(--md-sys-color-background);
 }
 .article-content table * {
@@ -129,7 +129,7 @@
 }
 
 .article-content pre {
-  background: var(--md-sys-color-surface) !important;
+  background: var(--md-sys-color-surface-variant) !important;
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
 }
@@ -139,6 +139,12 @@
   color: var(--md-sys-color-on-surface);
   white-space: pre;
   background: var(--md-sys-color-surface) !important;
+}
+
+/* code blocks: no per-line background, the <pre> already has one */
+.article-content pre code {
+  background: transparent !important;
+  padding: 0;
 }
 
 /* lbox */
@@ -169,5 +175,5 @@
   max-height: 80%;
   padding: 4px;
   background-color: black;
-  border: 2px dashed var(--md-sys-color-primary-container);
+  border: 2px dashed var(--md-sys-color-primary);
 }

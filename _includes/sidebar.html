@@ -1,0 +1,28 @@
+<button id="sidebar-toggle" aria-label="打开信息栏" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div id="sidebar-scrim"></div>
+
+<aside id="sidebar">
+  <button id="sidebar-collapse" aria-label="收起信息栏">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+      <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+    </svg>
+  </button>
+  <div id="sidebar-header">
+    <img src="{{ site.data.author.dp }}" alt="Avatar missing" id="sidebar-avatar" />
+    <a id="sidebar-site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div id="sidebar-text">{{ site.data.author.description }}</div>
+  </div>
+
+  <nav id="sidebar-social-links">
+    {% for i in site.data.author.contact %}
+    <a href="{{ i.url }}" target="_blank" aria-label="{{ i.title }}">
+      <img src="{{ site.baseurl }}/assets/icons/{{ i.title }}.svg" alt="{{ i.title }}" />
+    </a>
+    {% endfor %}
+  </nav>
+</aside>

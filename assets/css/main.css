@@ -75,8 +75,8 @@ header .site-title {
 }
 
 #bio-text a {
-  color: var(--md-sys-color-primary-container);
-  border-bottom: 3px solid var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-primary);
+  border-bottom: 3px solid var(--md-sys-color-primary);
 }
 
 #social-links {
@@ -93,8 +93,8 @@ header .site-title {
   align-items: center;
   padding: 0.5rem;
   border-radius: var(--border-radius);
-  color: var(--md-sys-color-on-primary-container);
-  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-tertiary-container);
+  background-color: var(--md-sys-color-tertiary-container);
 }
 
 #social-links a img {
@@ -151,7 +151,7 @@ header .site-title {
 }
 
 .article-date {
-  color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-primary);
 }
 
 .article-categories {
@@ -163,8 +163,8 @@ header .site-title {
 .article-category {
   padding: 0.4rem 0.8rem;
   border-radius: var(--border-radius);
-  color: var(--md-sys-color-on-primary-container);
-  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-tertiary-container);
+  background-color: var(--md-sys-color-tertiary-container);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,10 +173,10 @@ header .site-title {
 
 /* footer */
 footer {
-  background: var(--md-sys-color-primary-container);
+  background: var(--md-sys-color-tertiary-container);
   margin: 10rem 0 -3rem 0;
   padding: 2rem 2.5rem;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   font-size: 1.2rem;
-  color: var(--md-sys-color-on-primary-container);
+  color: var(--md-sys-color-on-tertiary-container);
 }
