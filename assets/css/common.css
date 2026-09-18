@@ -1,5 +1,5 @@
 hr {
-  border-top: 5px dashed var(--dm-contrast) !important;
+  border-top: 5px dashed var(--md-sys-color-primary-container) !important;
   border-bottom: none !important;
   border-left: none !important;
   border-right: none !important;
@@ -31,7 +31,7 @@ hr {
   border-radius: 1rem;
   padding: 1rem;
   margin: auto;
-  background: var(--bg-dm-secondary);
+  background: var(--md-sys-color-surface);
   display: none;
   visibility: hidden;
   line-height: 140%;
@@ -54,7 +54,7 @@ hr {
 .modal-article,
 .modal-article-date {
   display: block;
-  color: var(--text-dm-secondary);
+  color: var(--md-sys-color-on-surface);
 }
 .modal-article {
   margin-bottom: 0.5rem;
@@ -65,7 +65,7 @@ hr {
   font-size: 0.8rem;
 }
 .modal-article:hover {
-  background: var(--bg-dm-primary);
+  background: var(--md-sys-color-background);
 }
 
 /* queries */

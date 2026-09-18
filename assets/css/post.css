@@ -16,8 +16,8 @@
 
 #article .article-thumbnail .article-title {
   font-size: 2rem !important;
-  color: var(--dm-contrast);
-  text-shadow: 0px 0px 3px var(--bg-dm-primary);
+  color: var(--md-sys-color-primary-container);
+  text-shadow: 0px 0px 3px var(--md-sys-color-background);
   line-height: 120%;
 }
 
@@ -46,8 +46,8 @@
   padding: 0;
 }
 .article-content a {
-  color: var(--dm-contrast);
-  border-bottom: 3px solid var(--dm-contrast);
+  color: var(--md-sys-color-primary-container);
+  border-bottom: 3px solid var(--md-sys-color-primary-container);
 }
 .article-content h1 {
   font-size: 2rem;
@@ -81,7 +81,7 @@
   margin-bottom: 1.75rem;
   font-style: italic;
   font-weight: 100;
-  border-left: 0.3rem solid var(--dm-contrast);
+  border-left: 0.3rem solid var(--md-sys-color-primary-container);
   font-size: 1.2rem;
 }
 .article-content strong {
@@ -107,12 +107,12 @@
   border-collapse: collapse;
 }
 .article-content table th {
-  background-color: var(--text-dm-primary);
-  color: var(--bg-dm-primary);
-  border: 1px solid var(--bg-dm-primary);
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-background);
+  border: 1px solid var(--md-sys-color-background);
 }
 .article-content table * {
-  border: 1px solid var(--text-dm-primary);
+  border: 1px solid var(--md-sys-color-primary);
   padding: 0.2rem;
 }
 .article-content img {
@@ -129,16 +129,16 @@
 }
 
 .article-content pre {
-  background: var(--bg-dm-secondary) !important;
+  background: var(--md-sys-color-surface) !important;
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
 }
 
 .article-content code {
   padding: 3px 5px;
-  color: var(--text-dm-secondary);
+  color: var(--md-sys-color-on-surface);
   white-space: pre;
-  background: var(--bg-dm-secondary) !important;
+  background: var(--md-sys-color-surface) !important;
 }
 
 /* lbox */
@@ -154,7 +154,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--bg-dm-primary);
+  background-color: var(--md-sys-color-background);
   display: none;
 }
 
@@ -169,5 +169,5 @@
   max-height: 80%;
   padding: 4px;
   background-color: black;
-  border: 2px dashed var(--dm-contrast);
+  border: 2px dashed var(--md-sys-color-primary-container);
 }
