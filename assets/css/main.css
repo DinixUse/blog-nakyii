@@ -113,7 +113,7 @@ header .site-title {
 }
 
 .article {
-  background-color: var(--md-sys-color-surface);
+  background-color: var(--md-sys-color-surface-1);
   padding: 2rem 2.5rem;
   border-radius: var(--border-radius);
   display: flex;

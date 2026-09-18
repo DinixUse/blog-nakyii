@@ -212,7 +212,7 @@ hr {
   width: 56px;
   height: 56px;
   border: none;
-  border-radius: 1rem;
+  border-radius: 1.3rem;
   background: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
   display: flex;
