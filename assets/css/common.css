@@ -17,6 +17,7 @@ hr {
   background: rgba(0, 0, 0, 0.6);
   z-index: 800;
   display: none;
+  visibility: hidden;
 }
 #category-modal {
   position: fixed;
@@ -32,6 +33,7 @@ hr {
   margin: auto;
   background: var(--md-sys-color-surface-variant);
   display: none;
+  visibility: hidden;
   line-height: 140%;
 }
 #category-modal-content {
@@ -44,14 +46,10 @@ hr {
   font-size: 2rem;
   padding: 1rem;
 }
-#category-modal-bg.open {
-  display: block;
-}
-
+#category-modal-bg.open,
 #category-modal.open {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  visibility: visible;
 }
 
 #category-modal-bg.open {
