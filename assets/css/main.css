@@ -12,7 +12,8 @@
   --bg-dm-primary: var(--md-sys-color-background);
   --bg-dm-secondary: var(--md-sys-color-surface);
   /* Other vars */
-  --border-radius: 2rem;
+  --border-radius: 2.4rem;
+  --pgcontainer-bg: var(--md-sys-color-surface);  /* pgcontainer 的背景色 */
 }
 
 * {

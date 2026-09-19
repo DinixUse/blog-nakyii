@@ -155,9 +155,6 @@ hr {
   background: var(--md-sys-color-on-primary);
   color: var(--md-sys-color-primary);
 }
-
-/* sidebar - Material Design 3 info panel */
-
 #sidebar {
   position: fixed;
   top: 0;
@@ -169,7 +166,10 @@ hr {
   padding: 2rem 1.5rem;
   overflow-y: auto;
   background: var(--md-sys-color-surface-1);
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  
+  /* 移除原来的圆角 */
+  /* border-radius: 0 var(--border-radius) var(--border-radius) 0; */
+  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -178,10 +178,47 @@ hr {
   visibility: hidden;
   transition: transform 0.35s cubic-bezier(0.05, 0.7, 0.1, 1),
     visibility 0.35s;
+  
+  overflow: visible;
 }
+
 #sidebar.open {
   transform: translateX(0);
   visibility: visible;
+}
+
+/* 右上角：上下镜像（圆心从 (100% 0) → (100% 100%)）+ 颜色对调 */
+#sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    circle at 100% 100%,
+    var(--md-sys-color-surface) calc(var(--border-radius) - 1px),
+    var(--md-sys-color-surface-1) var(--border-radius)
+  );
+}
+
+/* 右下角：上下镜像（圆心从 (100% 100%) → (100% 0)）+ 颜色对调 */
+#sidebar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    circle at 100% 0,
+    var(--md-sys-color-surface) calc(var(--border-radius) - 1px),
+    var(--md-sys-color-surface-1) var(--border-radius)
+  );
 }
 
 #sidebar-header {
