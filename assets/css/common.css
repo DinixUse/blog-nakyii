@@ -207,9 +207,19 @@ hr {
   line-height: 150%;
 }
 
-.siderbar-link-text {
-  color: var(--md-sys-color-tertiary);
-}
+#sidebar-nav-links {
+   gap: 0.4rem;
+   margin-top: 1rem;
+ }
+
+ #sidebar-nav-links a {
+   color: var(--md-sys-color-primary);
+   text-decoration: none;
+   padding: 0.09rem 0.2rem;
+   border-radius: var(--border-radius);
+   transition: all 0.3s ease;
+   font-weight: 500;
+ }
 
 #sidebar-social-links {
   display: flex;
