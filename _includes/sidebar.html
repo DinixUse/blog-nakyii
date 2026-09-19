@@ -18,6 +18,13 @@
     <div id="sidebar-text">{{ site.data.author.description }}</div>
   </div>
 
+  <nav id="sidebar-nav-links">
+    <a href="{{ site.baseurl }}/">Home</a>
+    <a href="{{ site.baseurl }}/tags">Tags</a>
+    <a href="{{ site.baseurl }}/posts/关于本站/">Info</a>
+    <a href="{{ site.baseurl }}/links">Links</a>
+  </nav>
+
   <nav id="sidebar-social-links">
     {% for i in site.data.author.contact %}
     <a href="{{ i.url }}" target="_blank" aria-label="{{ i.title }}">

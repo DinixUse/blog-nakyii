@@ -17,7 +17,6 @@ hr {
   background: rgba(0, 0, 0, 0.6);
   z-index: 800;
   display: none;
-  visibility: hidden;
 }
 #category-modal {
   position: fixed;
@@ -33,7 +32,6 @@ hr {
   margin: auto;
   background: var(--md-sys-color-surface-variant);
   display: none;
-  visibility: hidden;
   line-height: 140%;
 }
 #category-modal-content {
@@ -92,6 +90,62 @@ hr {
   background: var(--md-sys-color-surface-variant);
 }
 
+/* tags page styles */
+.tags-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+}
+
+.tag-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.tag-button:hover {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tag-count {
+  background: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tag-button:hover .tag-count {
+  background: var(--md-sys-color-on-primary);
+  color: var(--md-sys-color-primary);
+}
+
 /* sidebar - Material Design 3 info panel */
 
 #sidebar {
@@ -141,6 +195,10 @@ hr {
   color: var(--md-sys-color-on-surface-variant);
   font-size: 0.9rem;
   line-height: 150%;
+}
+
+#siderbar-link-text {
+  color: var(--md-sys-color-tertiary);
 }
 
 #sidebar-social-links {

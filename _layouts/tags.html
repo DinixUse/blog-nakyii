@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+  {% include head.html %}
+  <body>
+    {% include sidebar.html %}
+    <main class="blogfeed">
+      {% include header.html %} 
+      
+      <section id="articles">
+        {{ content }}
+      </section>
+      
+      <!--  -->
+      {% include footer.html %}
+    </main>
+    {% include category-modal.html%}
+  </body>
+</html>
