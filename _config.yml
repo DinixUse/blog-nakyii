@@ -5,8 +5,8 @@ baseurl: "/blog-nakyii"
 
 # for atom feed
 author:
-  name: Sharad Raj Singh Maurya
-  email: dev_sharad@outlook.com
+  name: Nakyii
+  email: dinix_never@outlook.com
 
 plugins:
   - jemoji
