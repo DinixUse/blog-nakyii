@@ -212,7 +212,7 @@ hr {
   width: 56px;
   height: 56px;
   border: none;
-  border-radius: 1.3rem;
+  border-radius: 1.25rem;
   background: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
   display: flex;
@@ -221,7 +221,12 @@ hr {
   align-items: center;
   gap: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+#sidebar-toggle.active {
+  border-radius: 50%;
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
 #sidebar-toggle span {
   width: 22px;
