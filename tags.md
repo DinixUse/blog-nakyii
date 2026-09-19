@@ -35,7 +35,7 @@ layout: tags
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   const categories = { {% for category in site.categories %}{% capture category_name %}{{ category | first }}{% endcapture %}"{{ category_name | replace: " ", "_" }}": [{% for post in site.categories[category_name] %}{ url: `{{ site.baseurl }}{{ post.url }}`, date: `{{post.date | date_to_string}}`, title: `{{post.title}}`},{% endfor %}],{% endfor %} };
   
   document.querySelectorAll('.tag-button').forEach(button => {
@@ -67,5 +67,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#category-modal-bg').classList.toggle('open');
     document.querySelector('#category-modal').classList.toggle('open');
   });
-});
+};
 </script>
