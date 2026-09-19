@@ -44,9 +44,21 @@ hr {
   font-size: 2rem;
   padding: 1rem;
 }
-#category-modal-bg.open,
-#category-modal.open {
+#category-modal-bg.open {
   display: block;
+}
+
+#category-modal.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#category-modal-bg.open {
+  visibility: visible;
+}
+
+#category-modal.open {
   visibility: visible;
 }
 
@@ -197,7 +209,7 @@ hr {
   line-height: 150%;
 }
 
-#siderbar-link-text {
+.siderbar-link-text {
   color: var(--md-sys-color-tertiary);
 }
 

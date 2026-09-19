@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   document.querySelector('#category-modal-bg').addEventListener('click', function() {
-    document.querySelector('#category-modal-title').innerText = '';
-    document.querySelector('#category-modal-content').innerHTML = '';
     document.querySelector('#category-modal-bg').classList.toggle('open');
     document.querySelector('#category-modal').classList.toggle('open');
   });
