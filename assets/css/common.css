@@ -199,7 +199,7 @@ hr {
   z-index: 1;
   background: radial-gradient(
     circle at 100% 100%,
-    var(--md-sys-color-surface) calc(var(--border-radius) - 1px),
+    transparent calc(var(--border-radius) - 1px),
     var(--md-sys-color-surface-1) var(--border-radius)
   );
 }
@@ -216,7 +216,7 @@ hr {
   z-index: 1;
   background: radial-gradient(
     circle at 100% 0,
-    var(--md-sys-color-surface) calc(var(--border-radius) - 1px),
+    transparent calc(var(--border-radius) - 1px),
     var(--md-sys-color-surface-1) var(--border-radius)
   );
 }
