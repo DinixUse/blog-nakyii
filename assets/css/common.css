@@ -160,7 +160,7 @@ hr {
   top: 0;
   left: 0;
   bottom: 0;
-  width: min(260px, 85vw);
+  width: min(280px, 85vw);
   z-index: 500;
   box-sizing: border-box;
   padding: 2rem 1.5rem;
@@ -289,7 +289,7 @@ hr {
   height: 40px;
   border: none;
   border-radius: 50%;
-  background: var(--md-sys-color-surface-variant);
+  background: transparent;
   color: var(--md-sys-color-on-surface-variant);
   justify-content: center;
   align-items: center;
