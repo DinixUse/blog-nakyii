@@ -281,6 +281,35 @@ hr {
   border-radius: 50%;
 }
 
+/* theme toggle button at bottom left of sidebar */
+#theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--md-sys-color-tertiary-container);
+  color: var(--md-sys-color-on-tertiary-container);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+  margin-left: 0.09rem;
+}
+
+#theme-toggle:hover {
+  border-radius: 12px;
+  background: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+}
+
+#theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* collapse button (large screens only, MD3 icon button) */
 
 #sidebar-collapse {
