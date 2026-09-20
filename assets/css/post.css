@@ -34,7 +34,7 @@
 }
 
 #article .article-content * {
-  font-weight: 400;
+  font-weight: normal;
 }
 
 /* markdown content */
@@ -86,7 +86,13 @@
   font-size: 1.2rem;
 }
 .article-content strong {
-  font-weight: bold;
+  font-weight: bold !important;
+}
+
+.article-content del,
+.article-content s {
+  text-decoration: line-through;
+  color: inherit;
 }
 .article-content ul {
   margin-left: 1rem;
