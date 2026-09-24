@@ -48,7 +48,6 @@
 }
 .article-content a {
   color: var(--md-sys-color-tertiary);
-  border-bottom: 3px solid var(--md-sys-color-tertiary);
 }
 .article-content h1 {
   font-size: 2rem;
@@ -183,4 +182,107 @@
   padding: 4px;
   background-color: black;
   border: 2px dashed var(--md-sys-color-primary);
+}
+
+/* 父容器：强制 flex 横向、不换行、顶部对齐 */
+.friend-link-card {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-bottom: none !important;
+}
+
+.friend-link-wrapper {
+  display: flex !important;
+  flex-direction: row !important;      /* 强制横向，防止被移动端 column 覆盖 */
+  flex-wrap: nowrap !important;        /* 关键：禁止换行，logo 和文字绝不掉到下一行 */
+  align-items: flex-start !important;  /* 关键：顶部对齐 */
+  justify-content: flex-start !important;
+  gap: 1.5rem;                         /* 图片与文字间距 */
+  padding: 1.5rem;
+  text-align: left !important;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+
+/* Logo：固定在左侧，不伸缩 */
+.friend-link-logo {
+  flex: 0 0 auto !important;           /* 不放大、不缩小 */
+  align-self: flex-start !important;   /* 自己顶部对齐 */
+  width: 67px;
+  height: 67px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 !important;                /* 清掉任何 margin-bottom，避免把文字挤下去 */
+  background: var(--md-sys-color-primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friend-link-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 文字块：占满剩余宽度，内部纵向排列 */
+.friend-link-content {
+  flex: 1 1 auto !important;
+  min-width: 0;
+  align-self: flex-start !important;   /* 顶部对齐 logo */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;  /* 文字左对齐 */
+  text-align: left !important;
+}
+
+/* 标题：第一行，贴顶部 */
+.friend-link-name {
+  margin: 0 0 0.5rem 0 !important;     /* 上边距 0，才能和 logo 顶线齐平 */
+  padding: 0 !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--md-sys-color-on-surface);
+}
+
+/* 小标题：紧接标题下方 */
+.friend-link-description {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* 网格布局保持 */
+.friend-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* 移动端：不再改成 column，只缩小尺寸 */
+@media (max-width: 768px) {
+  .friend-link-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    padding: 1rem !important;
+    gap: 1rem !important;
+    text-align: left !important;
+  }
+
+  .friend-link-logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 !important;
+  }
+
+  .friend-links-grid {
+    grid-template-columns: 1fr;
+  }
 }
