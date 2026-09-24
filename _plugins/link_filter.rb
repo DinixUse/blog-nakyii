@@ -3,7 +3,7 @@ module Jekyll
     def parse_link_syntax(input)
       return input unless input.is_a?(String)
       
-      result = input.gsub(/\{Link\}\[(.*?)\]\[(.*?)\]\[(.*?)\]\[(.*?)\]/) do
+      result = input.gsub(/::Link::\[(.*?)\]\[(.*?)\]\[(.*?)\]\[(.*?)\]/) do
         logo_url = CGI.escapeHTML(Regexp.last_match(1))
         name = CGI.escapeHTML(Regexp.last_match(2))
         description = CGI.escapeHTML(Regexp.last_match(3))
