@@ -28,7 +28,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-          bundler-cache: true
+          bundler-cache: false
+
+      - name: Prepare Bundler
+        run: |
+          bundle lock --add-platform x86_64-linux
+          bundle install --jobs 4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
