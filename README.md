@@ -30,4 +30,4 @@ That's basically it.
 
 ---
 
-© nAKyii
+© naKy::i
