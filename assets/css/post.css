@@ -47,7 +47,26 @@
   padding: 0;
 }
 .article-content a {
+  position: relative;
   color: var(--md-sys-color-tertiary);
+  text-decoration: none; /* 去掉默认下划线，避免和伪元素冲突 */
+}
+
+.article-content a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;              /* 横线与文字的距离，可按需调整 */
+  width: 100%;
+  height: 1px;               /* 横线粗细 */
+  background-color: var(--md-sys-color-tertiary);
+  transform: scaleX(0);      /* 默认隐藏 */
+  transform-origin: left;    /* 从左侧展开 */
+  transition: transform 0.25s ease;
+}
+
+.article-content a:hover::after {
+  transform: scaleX(1);      /* 悬停时展开 */
 }
 .article-content h1 {
   font-size: 2rem;
