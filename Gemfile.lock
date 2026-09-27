@@ -117,6 +117,7 @@ PLATFORMS
   aarch64-linux-android
 
 DEPENDENCIES
+  jekyll
   jekyll-feed
   jekyll-seo-tag
   jekyll-sitemap
