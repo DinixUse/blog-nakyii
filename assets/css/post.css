@@ -157,6 +157,43 @@
   background: var(--md-sys-color-surface-variant) !important;
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
+  position: relative;
+}
+
+/* 代码块复制按钮 */
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  color: var(--md-sys-color-on-surface);
+  border: none;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.copy-button .material-icons {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.copy-button:hover {
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.copy-button.copied {
+  background: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
 }
 
 .article-content code {
