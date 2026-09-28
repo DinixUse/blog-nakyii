@@ -92,7 +92,7 @@
 .article-content h4,
 .article-content h5,
 .article-content h6 {
-  margin: 8.2rem 0 1.75rem;   /* 上 3rem，左右 0，下 1.75rem */
+  margin: 8.2rem 0 1.75rem;   /* 上 8.2rem，左右 0，下 1.75rem */
   font-weight: bolder !important;
 }
 .article-content blockquote {
@@ -146,18 +146,35 @@
 }
 
 /* pre , code */
+/*
+ * 关键修改：
+ * 1) 只让 .article-content / div / div pre 承担 overflow-x，
+ *    但下面用更高特异性的 #article 选择器把 pre 的 overflow 改回 visible。
+ * 2) <pre> 不再滚动，只作为复制按钮的定位参考；
+ *    真正的横向滚动交给内部的 <code> 元素承担。
+ *    这样 position:absolute 的复制按钮就固定住了，不会跟着代码滚动。
+ */
 .article-content,
 .article-content div,
-.article-content div pre,
-.article-content div pre code {
+.article-content div pre {
   overflow-x: auto !important;
 }
 
-.article-content pre {
+/* <pre> 作为定位容器（不滚动），保证复制按钮位置固定 */
+#article .article-content pre {
+  overflow: visible !important;
   background: var(--md-sys-color-surface-variant) !important;
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
   position: relative;
+}
+
+/* 由 <code> 承担横向滚动，复制按钮不受影响 */
+#article .article-content pre code {
+  display: block;
+  overflow-x: auto !important;
+  padding: 0;
+  background: transparent !important;
 }
 
 /* 代码块复制按钮 */
