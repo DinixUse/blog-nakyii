@@ -185,7 +185,7 @@ footer {
 :root {
   --page-bg-image: url("https://picx.zhimg.com/v2-50772ef536dbb70b901db3378cfe334f_r.jpg?source=1def8aca");
   /* 遮罩浓度：surface 占比，越大越不透明 */
-  --page-bg-overlay: 60%;
+  --page-bg-overlay: 75%;
 }
 
 body {
