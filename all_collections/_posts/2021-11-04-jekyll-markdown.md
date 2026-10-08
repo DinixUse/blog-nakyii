@@ -18,7 +18,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 Images can be clicked to enlarge :) .
 
-![Dummy Image](https://picsum.photos/800/300)
+![Komeiji](https://picx.zhimg.com/v2-74a97108a84d2814de30db62c6c969c0_r.jpg?source=1def8aca)
 
 # Header 1
 
